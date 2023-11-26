@@ -1,4 +1,3 @@
-
 import com.example.Feline;
 import com.example.Lion;
 import org.junit.Test;
@@ -11,6 +10,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
+
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
     @Mock
@@ -22,22 +22,22 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actualResult = lion.getKittens();
         int expectedResult = 1;
-        assertEquals (actualResult,expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
-        @Test
+    @Test
     public void getFoodtest() throws Exception {
         Lion lion = new Lion(feline, "Самка");
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualResult = lion.getFood();
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
-        assertEquals (actualResult,expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
     @Test
-    public void exceptionTest()  {
+    public void exceptionTest() {
         assertThrows("Используйте допустимые значения пола животного - самей или самка", Exception.class, () -> new Lion(feline, "Самей"));
     }
 
