@@ -38,7 +38,7 @@ public class CatTest {
         Mockito.when(predator.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualResult = cat.getFood();
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
 
     }
 }

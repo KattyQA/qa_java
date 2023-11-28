@@ -12,15 +12,12 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class LionParamsTest {
-    @Mock
-    Feline feline;
-
     @Parameterized.Parameter
     public String sex;
-
-
     @Parameterized.Parameter(1)
     public boolean expectedResult;
+    @Mock
+    Feline feline;
 
     @Parameterized.Parameters
     public static Object[][] data() {
@@ -42,7 +39,6 @@ public class LionParamsTest {
         Lion lion = new Lion(feline, sex);
         boolean actualResult = lion.doesHaveMane();
         assertEquals(actualResult, expectedResult);
-
 
     }
 

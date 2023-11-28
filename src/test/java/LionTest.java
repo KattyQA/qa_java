@@ -39,7 +39,7 @@ public class LionTest {
     @Test
     public void exceptionTest() {
         assertThrows("Используйте допустимые значения пола животного - самей или самка", Exception.class, () -> new Lion(feline, "Самей"));
-    }
 
+    }
 
 }
