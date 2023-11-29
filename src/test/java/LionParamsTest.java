@@ -38,7 +38,7 @@ public class LionParamsTest {
     public void doesHaveManeTest() throws Exception {
         Lion lion = new Lion(feline, sex);
         boolean actualResult = lion.doesHaveMane();
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
 
     }
 

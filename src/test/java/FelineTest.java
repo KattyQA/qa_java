@@ -15,7 +15,7 @@ public class FelineTest {
         String actualResult = feline.getFamily();
         String expectedResult = "Кошачьи";
 
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
 
     }
 

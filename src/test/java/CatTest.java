@@ -29,7 +29,7 @@ public class CatTest {
         String actualSound = cat.getSound();
         String expectedSound = "Мяу";
 
-        assertEquals(actualSound, expectedSound);
+        assertEquals(expectedSound, actualSound);
 
     }
 

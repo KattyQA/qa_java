@@ -22,7 +22,7 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(1);
         int actualResult = lion.getKittens();
         int expectedResult = 1;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
 
     }
 
@@ -32,7 +32,7 @@ public class LionTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         List<String> actualResult = lion.getFood();
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
 
     }
 
